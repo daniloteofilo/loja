@@ -66,11 +66,10 @@ function LoginPage() {
     <body className="styleBody">
         <div className="leftContent"></div>
         <div className="rightContent">
-            <h1>Login</h1>
+            <h2>Login</h2>
             <form className='formLogin'>
                 <div className='width50'>
                 <label>
-                    <p className='noMarginBottom'>Email:</p>
                     <p className='messageError'>
                     {validationEmail}
                     </p>
@@ -79,7 +78,6 @@ function LoginPage() {
                 </div>
                 <div className='width50'>
                 <label>
-                    <p className='noMarginBottom'>Senha:</p>
                     <p className='messageError'>
                     {validationPassword}
                     </p>
