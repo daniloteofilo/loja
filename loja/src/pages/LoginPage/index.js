@@ -10,9 +10,6 @@ function LoginPage() {
   const [validationPassword, setValidationPassword] = useState('')
   const [inputType, setInputType] = useState('password')
   const [iconContent, setIconContent] = useState(HiddenPassIcon)
-  const [styleBody, setStyleBody] = useState('styleBody3')
-  const [bgImageInside, setBgImageInside] = useState('formStyle3')
-  const [buttonSubmitStyle, setButtonSubmitStyle] = useState('buttonSubmit1')
 
   const handleEmailChange = (event) => {
    setEmail(event.target.value)
@@ -65,43 +62,10 @@ function LoginPage() {
         error.innerHTML = 'Email ou senha incorreta'
     };
   }
-  const changeStyleBody = () => {
-     if (styleBody==='styleBody1' && bgImageInside==='formStyle1' && buttonSubmitStyle ==='buttonSubmit1'){
-        setStyleBody('styleBody2')
-        setBgImageInside('formStyle2')
-        setButtonSubmitStyle('buttonSubmit2')
-     }else if (styleBody==='styleBody2' && bgImageInside==='formStyle2' && buttonSubmitStyle ==='buttonSubmit2'){
-        setStyleBody('styleBody3')
-        setBgImageInside('formStyle3')
-        setButtonSubmitStyle('buttonSubmit1')
-     }else if (styleBody==='styleBody3' && bgImageInside==='formStyle3'){
-        setStyleBody('styleBody1')
-        setBgImageInside('formStyle1')
-     }
-  }
-  const changeStyleBodyReturn = () => {
-    if (styleBody==='styleBody1' && bgImageInside==='formStyle1'){
-       setStyleBody('styleBody3')
-       setBgImageInside('formStyle3')
-    }else if (styleBody==='styleBody2' && bgImageInside==='formStyle2' && buttonSubmitStyle ==='buttonSubmit2'){
-       setStyleBody('styleBody1')
-       setBgImageInside('formStyle1')
-       setButtonSubmitStyle('buttonSubmit1')
-    }else if (styleBody==='styleBody3' && bgImageInside==='formStyle3' && buttonSubmitStyle ==='buttonSubmit1'){
-       setStyleBody('styleBody2')
-       setBgImageInside('formStyle2')
-       setButtonSubmitStyle('buttonSubmit2')
-    }
- }
   return (
-    <body className={styleBody}>
-        <div style={{display:'flex', justifyContent:'space-evenly', width:'100%'}}>
-            <div onClick={changeStyleBodyReturn} className='buttonLeftChangeStyle'></div>
-            <h2>Mude o estilo da página</h2>
-            <div onClick={changeStyleBody} className='buttonRightChangeStyle'></div>
-        </div>
-        
-        <div className={bgImageInside}>
+    <body className="styleBody">
+        <div className="leftContent"></div>
+        <div className="rightContent">
             <h1>Login</h1>
             <form className='formLogin'>
                 <div className='width50'>
@@ -130,7 +94,7 @@ function LoginPage() {
                     </div>
                 </label>
                 </div>
-                <div onClick={confirm} className={buttonSubmitStyle}></div>
+                <div onClick={confirm} className="buttonSubmit">Login</div>
                 <div>
                     <p id='messageError' className='messageError'></p>
                 </div>
