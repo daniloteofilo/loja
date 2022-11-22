@@ -66,7 +66,7 @@ function LoginPage() {
     <body className="styleBody">
         <div className="leftContent"></div>
         <div className="rightContent">
-            <h2>Login</h2>
+            <h2>Conectar-se</h2>
             <form className='formLogin'>
                 <div className='width50'>
                 <label>
@@ -97,7 +97,7 @@ function LoginPage() {
                     <p id='messageError' className='messageError'></p>
                 </div>
                 <div>
-                    <p className='registerButton'>Não possui uma conta?<a className='registerButtonEffect' href='/register'>Cadastre-se</a></p>
+                    <p className='registerButton'>Não possui uma conta? <a className='registerButtonEffect' href='/register'>Cadastre-se</a></p>
                 </div>
             </form>
         </div>
