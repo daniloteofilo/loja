@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './styles.css';
 import ShowPassIcon from '../../asserts/images/showPass.png';
 import HiddenPassIcon from '../../asserts/images/hiddenPass.png';
+import './styles.css';
 
 function LoginPage() {
   const [email, setEmail] = useState('')

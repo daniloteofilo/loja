@@ -1,44 +1,26 @@
 import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import MapLeafLet from '../../components/MapLeafLet';
+import CardMotorcycle from '../../components/cardMotorcycle';
 
-const mdTheme = createTheme();
 
 function HomePage() {
+  const urlApi = 'https://637b7ee56f4024eac20f4a06.mockapi.io/motorcycle'
+  const [dataApi, setDataApi] = React.useState(null);
+
+
+  React.useEffect(() => {
+    fetch(urlApi)
+      .then((response) => response.json())
+      .then((json) => setDataApi(json));
+  }, []);
+
+  console.log(dataApi);
+
   return (
-    <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex', flexDirection:'row' }}>
-        <CssBaseline />
-          <Toolbar />
-          <Container maxWidth="100vw" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={0}>
-              <Grid item xs={12} md={12} lg={16}>
-                <Paper
-                  sx={{
-                    p: 1,
-                    pt: 0,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: '80vh',
-                    width:'90vw'
-                  }}
-                >
-                  <MapLeafLet />
-                </Paper>
-              </Grid>
-            </Grid>
-          </Container>
-        </Box>
-    </ThemeProvider>
+    <>
+      <CardMotorcycle />
+    </>
   );
 }
 
-export default function Dashboard() {
-  return <HomePage />;
-}
+export default HomePage;
+
