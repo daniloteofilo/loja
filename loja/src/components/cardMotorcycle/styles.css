@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;0,900;1,100;1,200;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.containerMotorcycleCards{
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.cardsContainer{
+    width: 400px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.423);
+    background: #e6e6e638;
+    margin-top: 30px;
+    font-family: 'Barlow', sans-serif;
+}
+.topCardsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-weight: 700;
+}
+.modelText{
+    font-size: 22px;
+}
+.brandSmallText{
+    font-size: 16px;
+    font-weight: 300;
+}
+.priceText{
+    font-weight: 600;
+    color: red;
+}
+.imageCards{
+    width:100%; 
+    height: auto; 
+    background: #e6e6e6;
+    cursor: pointer;
+}
+.bottomCardsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0px;
+}
+.bottomCardsContainer div {
+    display: flex;
+}
+.bottomCardsContainer span {
+    border: 1px solid rgba(4, 4, 4, 0.264);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}

@@ -1,5 +1,6 @@
 import { Box, FormControlLabel, Grow, Paper, Switch } from '@mui/material';
 import * as React from 'react';
+import './styles.css'
 
 
 const icon = (
@@ -7,9 +8,6 @@ const icon = (
     <Box component="svg" sx={{ width: 300, height: 400 }}>
       <Box
         component="polygon"
-        typography={"teste"}
-        
-        
       />
     </Box>
   </Paper>
@@ -37,14 +35,30 @@ function CardMotorcycle() {
 
   return (
     <>
-      <div style={{display: "flex", flexWrap: "wrap", width: "620px"}}>
+      <div className='containerMotorcycleCards'>
         {dataApi?.map((i) => (
-              <div style={{border: "1px solid red", width: "200px", display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center", backgroundImage:`${i?.image}`, backgroundRepeat: "no-repeat", backgroundSize: "100px 100px"}}>
-                <h3>{i?.model}</h3>
-                <h3>{i?.brand}</h3>
-                <h3>{i?.cc}</h3>
-                <img style={{width:"100px", height: "100px"}} src={i?.image} alt="Motorcycle"></img>
-                <h3>R$: {i?.price}</h3>
+              <div className='cardsContainer'>
+                <div className='topCardsContainer'>
+                  <div>
+                    <p className='modelText'>{i?.model}</p>
+                    <p className='brandSmallText'>{i?.brand}</p>
+                  </div>
+                  <p className='priceText'>R$: {i?.price}</p>
+                </div>
+                
+                <img className='imageCards' src={i?.image} alt={i?.model}></img>
+                <div className='bottomCardsContainer'>
+                  <div>
+                    <p>Marca:</p>
+                    <p>{i?.brand}</p>
+                  </div>
+                  <span></span>
+                  <div>
+                    <p>Cilindradas:</p>
+                    <p>{i?.cc}</p>
+                  </div>
+                  
+                </div>
               </div>
             ))}
       </div>
