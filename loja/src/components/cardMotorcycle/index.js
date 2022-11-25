@@ -26,7 +26,7 @@ function CardMotorcycle() {
                   <p className='priceText'>R$: {i?.price}</p>
                 </div>
                 
-                <img className='imageCards' src={i?.image} alt={i?.model}></img>
+                <img className='imageCards' href='/login' src={i?.image} alt={i?.model}></img>
                 <div className='bottomCardsContainer'>
                   <div>
                     <p>Marca:</p>

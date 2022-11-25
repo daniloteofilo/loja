@@ -35,7 +35,6 @@ h2{
   width: 80%;
   height: 70vh;
   font-size: 20px;
-  background-size: 100% 121%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,21 +44,19 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .inputLogin{
-  margin-left: 5px;
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(2, 2, 2, 0.223);
   padding: 10px;
-}
-.inputLogin:focus{
-    animation: neon 2s alternate infinite ease-in-out;
-    --cor-neon: white;
+  margin-bottom: 10px;
 }
 .messageError {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: rgba(255, 0, 0, 0.773);
   font-size: 13px;
   margin-bottom: 7px;
@@ -69,29 +66,24 @@ h2{
 }
 .inputPassContainer{
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 5px;
   border: none;
-  border-bottom: 1px solid rgba(2, 2, 2, 0.223);
 }
 .inputPass{
-  position: relative;
-  margin-left: 5px;
-  border-radius: 8px;
   outline: none;
   border: none;
   padding: 10px;
-}
-.inputPass:focus{
-    animation: neon 2s alternate infinite ease-in-out;
-    --cor-neon: white;
+  border-bottom: 1px solid rgba(2, 2, 2, 0.223);
+  position: absolute;
 }
 .iconPass{
   width: 25px;
   max-width: 25px;
-  position: absolute;
-  right: 16%;
+  left: 70px;
   cursor: pointer;
+  position: relative;
 }
 .buttonLogin{
   margin-top: 17px;
@@ -127,4 +119,9 @@ h2{
   animation: neon 2s alternate infinite ease-in-out;
   --cor-neon: rgba(6, 6, 6, 0.881);
   text-decoration: underline;
+}
+@media (max-width: 700px) {
+  .leftContent{
+    display: none;
+  }
 }

@@ -79,16 +79,16 @@ function LoginPage() {
                 <div>
                   <label>
                       <p className='messageError'>
-                      {validationPassword}
+                        {validationPassword}
                       </p>
                       <div className='inputPassContainer'>
-                      <input className='inputPass' type={inputType} placeholder='Digite sua senha' value={password} onChange={handlePasswordChange} onBlur={handleValidationPassword}/>
-                      <img 
-                          onClick={changeInputType} 
-                          className='iconPass' 
-                          src={iconContent} 
-                          alt='a' 
-                      />
+                        <input className='inputPass' type={inputType} placeholder='Digite sua senha' value={password} onChange={handlePasswordChange} onBlur={handleValidationPassword}/>
+                        <img 
+                            onClick={changeInputType} 
+                            className='iconPass' 
+                            src={iconContent} 
+                            alt='a' 
+                        />
                       </div>
                   </label>
                 </div>
