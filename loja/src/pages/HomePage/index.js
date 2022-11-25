@@ -132,7 +132,7 @@ function HomePage(props) {
           consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
           sapien faucibus et molestie ac.
         </Typography>
-        <Typography paragraph>
+        <Typography>
           <CardMotorcycle />
         </Typography>
       </Box>
