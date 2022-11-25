@@ -68,36 +68,36 @@ function LoginPage() {
         <div className="rightContent">
             <h2>Conectar-se</h2>
             <form className='formLogin'>
-                <div className='width50'>
-                <label>
-                    <p className='messageError'>
-                    {validationEmail}
-                    </p>
-                    <input className='inputLogin' type='email' placeholder='Digite seu email' value={email} onChange={handleEmailChange} onBlur={handleValidationEmail} />
-                </label>
+                <div>
+                  <label>
+                      <p className='messageError'>
+                      {validationEmail}
+                      </p>
+                      <input className='inputLogin' type='email' placeholder='Digite seu email' value={email} onChange={handleEmailChange} onBlur={handleValidationEmail} />
+                  </label>
                 </div>
-                <div className='width50'>
-                <label>
-                    <p className='messageError'>
-                    {validationPassword}
-                    </p>
-                    <div className='inputPassContainer'>
-                    <input className='inputPass' type={inputType} placeholder='Digite sua senha' value={password} onChange={handlePasswordChange} onBlur={handleValidationPassword}/>
-                    <img 
-                        onClick={changeInputType} 
-                        className='iconPass' 
-                        src={iconContent} 
-                        alt='a' 
-                    />
-                    </div>
-                </label>
+                <div>
+                  <label>
+                      <p className='messageError'>
+                      {validationPassword}
+                      </p>
+                      <div className='inputPassContainer'>
+                      <input className='inputPass' type={inputType} placeholder='Digite sua senha' value={password} onChange={handlePasswordChange} onBlur={handleValidationPassword}/>
+                      <img 
+                          onClick={changeInputType} 
+                          className='iconPass' 
+                          src={iconContent} 
+                          alt='a' 
+                      />
+                      </div>
+                  </label>
                 </div>
-                <div onClick={confirm} className="buttonSubmit">Login</div>
+                <div onClick={confirm} className="buttonLogin">Login</div>
                 <div>
                     <p id='messageError' className='messageError'></p>
                 </div>
                 <div>
-                    <p className='registerButton'>Não possui uma conta? <a className='registerButtonEffect' href='/register'>Cadastre-se</a></p>
+                    <p className='registerButton'>Não possui uma conta? <a className='registerButtonEffect' href="/login">Cadastre-se</a></p>
                 </div>
             </form>
         </div>
