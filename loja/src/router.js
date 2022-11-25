@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 function Router() {
 	return (
 		<Routes>
+            <Route path="/" element={<LoginPage />} />
             <Route path="/login" element={<LoginPage />} />
 			<Route path="/home" element={<HomePage />} />
         </Routes>
