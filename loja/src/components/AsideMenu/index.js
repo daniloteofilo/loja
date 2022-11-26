@@ -1,8 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar } from '@mui/material';
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { NavLink } from 'react-router-dom';
 
 
 function AsideMenu({ mobileOpen, handleDrawerToggle, drawerWidth }) {
@@ -14,13 +15,15 @@ function AsideMenu({ mobileOpen, handleDrawerToggle, drawerWidth }) {
       <List>
         {['Listagem de motos', 'Configurações do usuário'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton href={index === 0 ? "/motorcycles" : "/userconfig"}>
-              <ListItemIcon>
-                {index === 0 ? <TwoWheelerIcon /> : ''}
-                {index === 1 ? <SettingsIcon /> : ''}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+            <NavLink to={index === 0 ? "/motorcycles" : "/userconfig"}>
+              <ListItemButton >
+                <ListItemIcon>
+                  {index === 0 ? <TwoWheelerIcon /> : ''}
+                  {index === 1 ? <SettingsIcon /> : ''}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </NavLink>
           </ListItem>
         ))}
       </List>
