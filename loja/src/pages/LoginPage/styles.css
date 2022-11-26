@@ -98,21 +98,16 @@ h2{
   color: white;
 }
 .buttonLogin:hover{
-  cursor: pointer;
-  opacity: 1;
   animation: neon 2s alternate infinite ease-in-out;
   --cor-neon: rgba(6, 6, 6, 0.881);
   background-color: rgba(0, 0, 0, 0.823);
-
 }
 .registerButton{
   font-size: 65%;
-  margin-bottom: 0px;
 }
 .registerButtonEffect{
   text-decoration: none;
   color: black;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.881);
 }
 .registerButtonEffect:hover{
   cursor: pointer;

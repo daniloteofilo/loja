@@ -73,7 +73,13 @@ function LoginPage() {
                       <p className='messageError'>
                       {validationEmail}
                       </p>
-                      <input className='inputLogin' type='email' placeholder='Digite seu email' value={email} onChange={handleEmailChange} onBlur={handleValidationEmail} />
+                      <input 
+                        className='inputLogin' 
+                        type='email' 
+                        placeholder='Digite seu email' 
+                        value={email} 
+                        onChange={handleEmailChange} 
+                        onBlur={handleValidationEmail} />
                   </label>
                 </div>
                 <div>
@@ -82,7 +88,13 @@ function LoginPage() {
                         {validationPassword}
                       </p>
                       <div className='inputPassContainer'>
-                        <input className='inputPass' type={inputType} placeholder='Digite sua senha' value={password} onChange={handlePasswordChange} onBlur={handleValidationPassword}/>
+                        <input 
+                          className='inputPass' 
+                          type={inputType} 
+                          placeholder='Digite sua senha' 
+                          value={password} 
+                          onChange={handlePasswordChange} 
+                          onBlur={handleValidationPassword}/>
                         <img 
                             onClick={changeInputType} 
                             className='iconPass' 
@@ -97,7 +109,10 @@ function LoginPage() {
                     <p id='messageError' className='messageError'></p>
                 </div>
                 <div>
-                    <p className='registerButton'>Não possui uma conta? <a className='registerButtonEffect' href="/login">Cadastre-se</a></p>
+                    <p className='registerButton'>
+                      Não possui uma conta? 
+                      <a className='registerButtonEffect' href="/login">Cadastre-se</a>
+                    </p>
                 </div>
             </form>
         </div>

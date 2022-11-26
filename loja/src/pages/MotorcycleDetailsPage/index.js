@@ -4,9 +4,9 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import useMotocyclesDetail from "../../hooks/useMotorcycleDetail";
-import "./styles.css";
 import CheckoutModal from "../../components/CheckoutModal";
 import useCreateSale from "../../hooks/useCreateSale";
+import "./styles.css";
 
 function MotorcycleDetailsPage() {
   const { id } = useParams();
@@ -15,7 +15,10 @@ function MotorcycleDetailsPage() {
   const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    navigate("/motorcycles");
+  } 
 
   const handleCreateSale = (event) => {
     event.preventDefault();
@@ -29,7 +32,7 @@ function MotorcycleDetailsPage() {
     };
 
     createSale(saleData).then(() => {
-      navigate("/motorcycles");
+      setOpen(true)
     });
   };
   console.log(motorcycle && motorcycle.id ? motorcycle[id] : null);
@@ -74,12 +77,14 @@ function MotorcycleDetailsPage() {
           </div>
           <div className='bottomDetailsPage'>
             <h1> Informações da moto</h1>
-            <p>Cilindradas: {motorcycle.cc}</p>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              necessitatibus enim impedit quasi dicta. Adipisci, blanditiis
-              fugiat modi corrupti sit vero molestias commodi neque tempora
-              distinctio dicta odit, odio facere?
+              Inspirada nas motos esportivas de alta performance, a nova {motorcycle.model} chegou 
+              com ousadia e sofisticação. Com um design marcante e inovador, esse modelo tem
+              estilo de sobra para você surpreender por onde passar.
+              A {motorcycle.model} garante segurança para você encarar o trânsito da cidade com mais
+              tranquilidade e conforto que somente a {motorcycle.brand} pode oferecer. Ela conta com 
+              um motor de {motorcycle.cc} e um sistema de freios CBS (Combined Brake System) que
+              distribui a frenagem entre as rodas de maneira inteligente. 
             </p>
           </div>
         </>

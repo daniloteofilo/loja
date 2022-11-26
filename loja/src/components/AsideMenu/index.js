@@ -13,17 +13,16 @@ function AsideMenu({ mobileOpen, handleDrawerToggle, drawerWidth }) {
   const drawer = (
     <div>
       <Toolbar />
-      <Divider />
       <List>
         {['Listagem de motos', 'Vendas efetuadas'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <NavLink to={index === 0 ? "/motorcycles" : "/sales"}>
+            <NavLink className="navLinkNoStyle" to={index === 0 ? "/motorcycles" : "/sales"}>
               <ListItemButton >
                 <ListItemIcon>
                   {index === 0 ? <TwoWheelerIcon /> : ''}
                   {index === 1 ? <MonetizationOnIcon /> : ''}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText sx={{width:"160px"}} primary={text} />
               </ListItemButton>
             </NavLink>
           </ListItem>
@@ -33,12 +32,12 @@ function AsideMenu({ mobileOpen, handleDrawerToggle, drawerWidth }) {
       <List>
         {['Configurações do usuário', 'Sair'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <NavLink to={index === 0 ? "/userConfig" : "/login"}>
+            <NavLink className="navLinkNoStyle" to={index === 0 ? "/userConfig" : "/login"}>
               <ListItemButton>
                 <ListItemIcon>
                   {index === 0 ? <SettingsIcon /> : <ExitToAppIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText sx={{width:"160px"}} primary={text} />
               </ListItemButton>
             </NavLink>
           </ListItem>

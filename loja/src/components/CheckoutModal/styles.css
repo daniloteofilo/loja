@@ -1,0 +1,30 @@
+.modalContainer{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: white ;
+    box-shadow: 24;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+}
+.buttonConfirmModal{
+    margin-top: 10%;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    width: 200px;
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    cursor: pointer;
+}
+.buttonConfirmModal:hover{
+    opacity: 0.9;
+}

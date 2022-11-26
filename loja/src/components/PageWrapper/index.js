@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box } from '@mui/material';
 
 import AsideMenu from '../../components/AsideMenu';
-import './styles.css';
 
 const drawerWidth = 260;
 
@@ -12,7 +11,6 @@ function PageWrapper ({ children }) {
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
     };
-
 
     return (
       <Box sx={{ display: 'flex' }}>

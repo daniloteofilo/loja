@@ -3,20 +3,6 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import './styles.css'
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "60%",
-  bgcolor: "background.paper",
-  boxShadow: 24,
-  p: 5,
-  borderRadius: "10px",
-  outline:"none",
-  height:"500px"
-};
-
 function CheckoutModal({ open, handleClose }) {
   return (
     <div>
@@ -26,11 +12,12 @@ function CheckoutModal({ open, handleClose }) {
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <Box sx={style}>
-          <form>
-            <input type="text" placeholder='Nome do Comprador'/>
-            <input type="text" placeholder='Nome do Vendedor'/>
-          </form>
+        <Box className="modalContainer" >
+          <p>
+            Parabéns, deu tudo certo! O registro da
+            venda foi adicionado a página de vendas efetuadas.
+          </p>
+          <div className='buttonConfirmModal' onClick={handleClose}>Confirmar</div>
         </Box>
       </Modal>
     </div>

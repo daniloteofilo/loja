@@ -7,11 +7,10 @@ function CardMotorcycle() {
   const motorcycles = useMotocycles();
 
   return (
-    <>
       <div className='containerMotorcycleCards'>
         {motorcycles
           ? motorcycles.map((motorcycle) => (
-              <NavLink to={`/motorcycles/${motorcycle.id}`} key={motorcycle.id}>
+              <NavLink className="navLinkNoStyle" to={`/motorcycles/${motorcycle.id}`} key={motorcycle.id}>
                 <div className='cardsContainer'>
                   <div className='topCardsContainer'>
                     <div>
@@ -20,7 +19,6 @@ function CardMotorcycle() {
                     </div>
                     <p className='priceText'>R$: {motorcycle?.price}</p>
                   </div>
-
                   <img
                     className='imageCards'
                     href='/login'
@@ -43,7 +41,6 @@ function CardMotorcycle() {
             ))
           : "Loading..."}
       </div>
-    </>
   );
 }
 

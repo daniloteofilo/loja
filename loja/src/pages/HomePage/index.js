@@ -8,11 +8,8 @@ function HomePage() {
   return (
     <PageWrapper>
       <>
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-          enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-          imperdiet.
+        <Typography sx={{display:"flex", justifyContent:"center", fontSize:"26px", marginTop:"40px"}}>
+          Lista de motos  
         </Typography>
         <Typography>
           <CardMotorcycle />

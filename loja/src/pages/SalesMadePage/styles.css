@@ -1,0 +1,10 @@
+.tableSalesMade {
+    border: 1px solid black;
+   width: 100%;
+   text-align: center;
+   margin-top: 100px;
+}
+.tableSalesMade td{
+    border: 1px solid rgba(0, 0, 0, 0.452);
+    text-align: center;
+}
