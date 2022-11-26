@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;0,900;1,100;1,200;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.mainContainerDetailsPage{
+    display: flex;
+}
+.detailsLeftContainer{
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+}
+.detailsRightContainer{
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    padding: 20px;
+}
+.detailsRightContent{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #e0d4d4;
+}
+.textModelDetails{
+    font-size: 26px;
+    font-weight: 700;
+}
+.priceContent{
+    color: white;
+    background-color: black;
+    padding: 20px 30px;
+    font-size: 28px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+.modelMotorcycleRightContent{
+    border-top: 1px solid rgba(0, 0, 0, 0.455);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.455);
+}
+.purchaseButton{
+    color: white;
+    background-color: green;
+    padding: 20px 40px;
+    font-size: 32px;
+    font-weight: 900;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.purchaseButton:hover{
+    background-color: rgba(0, 128, 0, 0.867);
+    transform: scale(1.1, 1.1);
+    transition: 0.3s;
+}
+.bottomDetailsPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
