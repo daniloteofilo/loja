@@ -28,7 +28,7 @@ h2{
   width: 100%;
   height: 100vh;
   background-image: url("https://u.motoscdn.com.br/websites/CDHSQG/pages/WDGFTIS8/CUHAGCGUQBXA/image/9464/conversions/sistema-de-controle-anti-levantamento-%281%29-desktop.jpg?v=37c236ec");
-  background-size: 100% 100%;
+  background-size: 100vh 100%;
   background-repeat: no-repeat;
 }
 .rightContent{
@@ -87,7 +87,7 @@ h2{
 }
 .buttonLogin{
   margin-top: 17px;
-  width: 100%;
+  width: 90%;
   height: 40px;
   cursor: pointer;
   border-radius: 8px;
@@ -120,8 +120,9 @@ h2{
   --cor-neon: rgba(6, 6, 6, 0.881);
   text-decoration: underline;
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .leftContent{
     display: none;
   }
 }
+
