@@ -5,7 +5,7 @@ function useMotocyclesDetails(id) {
   const [dataApi, setDataApi] = useState(null);
 
   useEffect(() => {
-    fetch(`${urlApi}/${id}`)
+    fetch(`${urlApi}/motorcycle/${id}`)
       .then((response) => response.json())
       .then((json) => setDataApi(json));
   }, [id]);

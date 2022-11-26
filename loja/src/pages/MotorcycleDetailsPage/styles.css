@@ -24,7 +24,7 @@
     justify-content: space-between;
     flex-direction: column;
     padding: 20px;
-    background-color: #e0d4d4;
+    background-color: #e0d4d492;
 }
 .textModelDetails{
     font-size: 26px;
@@ -39,8 +39,21 @@
     border-radius: 6px;
 }
 .modelMotorcycleRightContent{
-    border-top: 1px solid rgba(0, 0, 0, 0.455);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.455);
+    /* border-top: 1px solid rgba(0, 0, 0, 0.455);
+    border-bottom: 1px solid rgb(0, 0, 0); */
+}
+.clientInformations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clientInformations input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(2, 2, 2, 0.223);
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(240, 248, 255, 0);
 }
 .purchaseButton{
     color: white;

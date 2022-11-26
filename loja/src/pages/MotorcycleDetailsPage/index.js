@@ -1,15 +1,36 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import useMotocyclesDetail from "../../hooks/useMotorcycleDetail";
 import "./styles.css";
+import CheckoutModal from "../../components/CheckoutModal";
+import useCreateSale from "../../hooks/useCreateSale";
 
 function MotorcycleDetailsPage() {
   const { id } = useParams();
   const motorcycle = useMotocyclesDetail(id);
+  const createSale = useCreateSale();
+  const navigate = useNavigate();
 
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => setOpen(false);
+
+  const handleCreateSale = (event) => {
+    event.preventDefault();
+    let formData = new FormData(event.target);
+    let saleData = {
+      motorcycleId: id,
+      buyerName: formData.get("buyerName"),
+      buyerEmail: formData.get("buyerEmail"),
+      buyerPhone: formData.get("buyerPhone"),
+    };
+
+    createSale(saleData).then(() => {
+      navigate("/motorcycles");
+    });
+  };
   console.log(motorcycle && motorcycle.id ? motorcycle[id] : null);
   return (
     <PageWrapper>
@@ -26,10 +47,23 @@ function MotorcycleDetailsPage() {
             <div className='detailsRightContainer'>
               <div className='detailsRightContent'>
                 <div className='priceContent'>R$: {motorcycle.price}</div>
-                <h2 className='modelMotorcycleRightContent'>
-                  {motorcycle.brand}
-                </h2>
-                <div className='purchaseButton'>COMPRAR</div>
+                <div className='modelMotorcycleRightContent'>
+                  <form
+                    onSubmit={handleCreateSale}
+                    className='clientInformations'
+                  >
+                    <input
+                      name='buyerName'
+                      type='text'
+                      placeholder='Nome do Comprador'
+                    />
+                    <input name='buyerEmail' placeholder='Email' />
+                    <input name='buyerPhone' placeholder='Número do telefone' />
+                    <div>
+                      <button className='purchaseButton'>COMPRAR</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -47,6 +81,7 @@ function MotorcycleDetailsPage() {
       ) : (
         "Loading..."
       )}
+      <CheckoutModal open={open} handleClose={handleClose} />
     </PageWrapper>
   );
 }
