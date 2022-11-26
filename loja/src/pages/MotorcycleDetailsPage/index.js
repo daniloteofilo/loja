@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -14,7 +14,7 @@ function MotorcycleDetailsPage() {
   const createSale = useCreateSale();
   const navigate = useNavigate();
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
 
   const handleCreateSale = (event) => {
@@ -25,6 +25,7 @@ function MotorcycleDetailsPage() {
       buyerName: formData.get("buyerName"),
       buyerEmail: formData.get("buyerEmail"),
       buyerPhone: formData.get("buyerPhone"),
+      createdAt: (new Date()).toISOString()
     };
 
     createSale(saleData).then(() => {
@@ -57,8 +58,14 @@ function MotorcycleDetailsPage() {
                       type='text'
                       placeholder='Nome do Comprador'
                     />
-                    <input name='buyerEmail' placeholder='Email' />
-                    <input name='buyerPhone' placeholder='Número do telefone' />
+                    <input 
+                      name='buyerEmail'
+                      type="email"
+                      placeholder='Email' />
+                    <input 
+                      name='buyerPhone' 
+                      type="number"
+                      placeholder='Número do telefone' />
                     <div>
                       <button className='purchaseButton'>COMPRAR</button>
                     </div>
