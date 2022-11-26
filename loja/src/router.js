@@ -8,7 +8,8 @@ function Router() {
 		<Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/login" element={<LoginPage />} />
-			<Route path="/home" element={<HomePage />} />
+			<Route path="/motorcycles" element={<HomePage />} />
+			<Route path="/motorcycles/:id" element={<HomePage />} />
         </Routes>
 	);
 }

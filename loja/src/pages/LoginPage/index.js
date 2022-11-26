@@ -55,7 +55,7 @@ function LoginPage() {
 
     // verificação para acesso
     if (email === '704@email.com' && password === '704app'){
-        (window.location.href = './home')
+        (window.location.href = './motorcycles')
     }else if(email ==='' || password === ''){
         error.innerHTML = 'Email ou senha não pode ser vazio'
     }else {

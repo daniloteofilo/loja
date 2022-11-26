@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 import './styles.css'
 
 function CardMotorcycle() {
@@ -17,30 +18,33 @@ function CardMotorcycle() {
     <>
       <div className='containerMotorcycleCards'>
         {dataApi?.map((i) => (
-              <div className='cardsContainer'>
-                <div className='topCardsContainer'>
-                  <div>
-                    <p className='modelText'>{i?.model}</p>
-                    <p className='brandSmallText'>{i?.brand}</p>
-                  </div>
-                  <p className='priceText'>R$: {i?.price}</p>
+          <NavLink to={`/motorcycles/${i.id}`}>
+            <div className='cardsContainer'>
+              <div className='topCardsContainer'>
+                <div>
+                  <p className='modelText'>{i?.model}</p>
+                  <p className='brandSmallText'>{i?.brand}</p>
                 </div>
-                
-                <img className='imageCards' href='/login' src={i?.image} alt={i?.model}></img>
-                <div className='bottomCardsContainer'>
-                  <div>
-                    <p>Marca:</p>
-                    <p>{i?.brand}</p>
-                  </div>
-                  <span></span>
-                  <div>
-                    <p>Cilindradas:</p>
-                    <p>{i?.cc}</p>
-                  </div>
-                  
-                </div>
+                <p className='priceText'>R$: {i?.price}</p>
               </div>
-            ))}
+
+              <img className='imageCards' href='/login' src={i?.image} alt={i?.model}></img>
+              <div className='bottomCardsContainer'>
+                <div>
+                  <p>Marca:</p>
+                  <p>{i?.brand}</p>
+                </div>
+                <span></span>
+                <div>
+                  <p>Cilindradas:</p>
+                  <p>{i?.cc}</p>
+                </div>
+
+              </div>
+            </div>
+          </NavLink>
+
+        ))}
       </div>
     </>
   );
