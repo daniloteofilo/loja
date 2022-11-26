@@ -6,7 +6,7 @@ import './styles.css';
 
 const drawerWidth = 260;
 
-const PageWrapper = ({ children }) => {
+function PageWrapper ({ children }) {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     const handleDrawerToggle = () => {

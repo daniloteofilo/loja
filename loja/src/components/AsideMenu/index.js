@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import SettingsIcon from '@mui/icons-material/Settings';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { NavLink } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -14,13 +15,13 @@ function AsideMenu({ mobileOpen, handleDrawerToggle, drawerWidth }) {
       <Toolbar />
       <Divider />
       <List>
-        {['Listagem de motos', 'Configurações do usuário'].map((text, index) => (
+        {['Listagem de motos', 'Vendas efetuadas'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <NavLink to={index === 0 ? "/motorcycles" : "/userconfig"}>
+            <NavLink to={index === 0 ? "/motorcycles" : "/sales"}>
               <ListItemButton >
                 <ListItemIcon>
                   {index === 0 ? <TwoWheelerIcon /> : ''}
-                  {index === 1 ? <SettingsIcon /> : ''}
+                  {index === 1 ? <MonetizationOnIcon /> : ''}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -30,20 +31,21 @@ function AsideMenu({ mobileOpen, handleDrawerToggle, drawerWidth }) {
       </List>
       <Divider />
       <List>
-        {['Sair'].map((text, index) => (
+        {['Configurações do usuário', 'Sair'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton href={index === 0 ? "/login" : ''} className="logoutButton">
-              <ListItemIcon>
-                {index === 0 ? <ExitToAppIcon /> : ''}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+            <NavLink to={index === 0 ? "/userConfig" : "/login"}>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index === 0 ? <SettingsIcon /> : <ExitToAppIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </NavLink>
           </ListItem>
         ))}
       </List>
     </div>
   );
-
 
   return (
     <>

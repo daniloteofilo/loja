@@ -48,7 +48,6 @@ function MotorcycleDetailsPage() {
             <div className='detailsRightContainer'>
               <div className='detailsRightContent'>
                 <div className='priceContent'>R$: {motorcycle.price}</div>
-                <div className='modelMotorcycleRightContent'>
                   <form
                     onSubmit={handleCreateSale}
                     className='clientInformations'
@@ -70,7 +69,6 @@ function MotorcycleDetailsPage() {
                       <button className='purchaseButton'>COMPRAR</button>
                     </div>
                   </form>
-                </div>
               </div>
             </div>
           </div>
