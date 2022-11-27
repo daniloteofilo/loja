@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Loja de motocicletas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto de criação de um exemplo de sistema para venda de motos que cumprisse os seguintes requisitos: 
+- Tela de login
+- Menu com as opções listagem de motos, configurações de usuário, sair.
+- Tela de listagem de motos (foto, nome da moto, marca, cilindrada).
+- Tela de detalhes da moto (Passando a moto selecionada na tela anterior).
+- Tela de finalizar a compra (após a tela de detalhes, com o dados da compra), após finalizar
+a compra volta pra tela de listagem.
 
-## Available Scripts
+## 🚀 Começando
 
-In the project directory, you can run:
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-### `npm start`
+### 📋 Pré-requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-Node.js instalado
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔧 Instalação
 
-### `npm test`
+Essa etapa será com os seguintes passos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+Abrir o seu sistema de versão distribuido de preferência, eu utilizo o gitbash.
+```
+Executar o comando para clonar o repositório na sua máquina:
+git clone https://github.com/daniloteofilo/loja.git
 
-### `npm run build`
+```
+Abrir a pasta do projeto com o sistema de versão e executar os comandos:
+-npm i   --Esse comando irá instalar todas as dependências necessárias para que o projeto funcione.
+-npm start   --Comando para inicialização do projeto. Ele irá rodar de maneira local.
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**EMAIL PARA LOGIN**  > 704@email.com
+**SENHA PARA LOGIN** > 704app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Construído com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-REACT
+-MATERIAL UI
+-HTML
+-CSS
+-MUITO AMOR KKK
 
-### `npm run eject`
+## 📌 Versão
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Projeto ainda em construção.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ✒️ Autor
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Danilo Teófilo  
+Me adicione no linkedin(https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## 📄 Licença
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Projeto livre!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎁 Expressões de gratidão
 
-### Code Splitting
+* Se curtiu, deixe uma star no projeto e ajude esse dev iniciante com seu apoio moral 📢;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Um agradecimento ao meu grande amigo e mentor(https://github.com/carlosxjm) 🍺;
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
