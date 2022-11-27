@@ -32,7 +32,7 @@ function AsideMenu({ mobileOpen, handleDrawerToggle, drawerWidth }) {
       <List>
         {['Configurações do usuário', 'Sair'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <NavLink className="navLinkNoStyle" to={index === 0 ? "/userConfig" : "/login"}>
+            <NavLink className="navLinkNoStyle" to={index === 0 ? null : "/login"}>
               <ListItemButton>
                 <ListItemIcon>
                   {index === 0 ? <SettingsIcon /> : <ExitToAppIcon />}
