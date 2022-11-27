@@ -36,12 +36,14 @@ Abrir a pasta do projeto com o sistema de versão e executar os comandos:
 **SENHA PARA LOGIN** > 704app
 
 ## 🛠️ Construído com
-
+```
 -REACT
 -MATERIAL UI
 -HTML
 -CSS
--MUITO AMOR KKK
+-MOCKAPI
+-MUITO AMOR <3
+```
 
 ## 📌 Versão
 
