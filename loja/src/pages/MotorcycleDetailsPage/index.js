@@ -35,7 +35,7 @@ function MotorcycleDetailsPage() {
     });
   };
   return (
-    <PageWrapper>
+    <PageWrapper className="bodyMotorcycleDetails">
       {motorcycle ? (
         <>
           <NavLink to={"/motorcycles"} style={{ cursor: "pointer" }}>
@@ -44,7 +44,7 @@ function MotorcycleDetailsPage() {
           <div className='mainContainerDetailsPage'>
             <div className='detailsLeftContainer'>
               <h3 className='textModelDetails'>{motorcycle.model}</h3>
-              <img src={motorcycle.image} alt='motorcycle' />
+              <img className="imageMotorcyleDetails" src={motorcycle.image} alt='motorcycle' />
             </div>
             <div className='detailsRightContainer'>
               <div className='detailsRightContent'>
