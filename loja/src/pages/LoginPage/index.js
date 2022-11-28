@@ -63,7 +63,7 @@ function LoginPage() {
     };
   }
   return (
-    <body className="styleBody">
+    <div className="styleBody">
         <div className="leftContent"></div>
         <div className="rightContent">
             <h2>Conectar-se</h2>
@@ -116,7 +116,7 @@ function LoginPage() {
                 </div>
             </form>
         </div>
-    </body>
+    </div>
   );
 }
 

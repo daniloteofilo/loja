@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import PageWrapper from "../../components/PageWrapper";
@@ -35,7 +34,6 @@ function MotorcycleDetailsPage() {
       setOpen(true)
     });
   };
-  console.log(motorcycle && motorcycle.id ? motorcycle[id] : null);
   return (
     <PageWrapper>
       {motorcycle ? (
@@ -44,10 +42,10 @@ function MotorcycleDetailsPage() {
             <ArrowBackIcon />
           </NavLink>
           <div className='mainContainerDetailsPage'>
-            <Typography className='detailsLeftContainer'>
+            <div className='detailsLeftContainer'>
               <h3 className='textModelDetails'>{motorcycle.model}</h3>
               <img src={motorcycle.image} alt='motorcycle' />
-            </Typography>
+            </div>
             <div className='detailsRightContainer'>
               <div className='detailsRightContent'>
                 <div className='priceContent'>R$: {motorcycle.price}</div>

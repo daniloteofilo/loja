@@ -5,6 +5,7 @@ function useCreateSale() {
   const [dataApi, setDataApi] = useState(null);
 
   const createSale = (salesData) => {
+  
     return fetch(`${urlApi}/sales`, { 
         method: "POST",
         headers:{ 'content-type' : 'application/json'

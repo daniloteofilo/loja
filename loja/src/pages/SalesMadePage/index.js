@@ -15,6 +15,7 @@ function SalesMadePage() {
         Registro de vendas 
       </Typography>
       <table className='tableSalesMade'>
+        <tbody>
           <tr>
             <th scope='col'>Nome do Cliente</th>
             <th scope='col'>Email</th>
@@ -22,8 +23,10 @@ function SalesMadePage() {
             <th scope='col'>Data da compra</th>
             <th scope='col'>ID da moto</th>
           </tr>
-          {salesMade?.map((item) => (
-            <tr>
+        </tbody>
+        <tbody>
+          {salesMade?.map((item, index) => (
+            <tr key={index}>
               <td>{item?.buyerName}</td>
               <td>{item?.buyerEmail}</td>
               <td>{item?.buyerPhone}</td>
@@ -31,6 +34,7 @@ function SalesMadePage() {
               <td>{item?.motorcycleId}</td>
             </tr>
           ))}
+        </tbody>
       </table>
     </PageWrapper>
   );

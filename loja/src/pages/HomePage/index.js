@@ -11,9 +11,9 @@ function HomePage() {
         <Typography sx={{display:"flex", justifyContent:"center", fontSize:"26px", marginTop:"40px"}}>
           Lista de motos  
         </Typography>
-        <Typography>
+        {/* <Typography> */}
           <CardMotorcycle />
-        </Typography>
+        {/* </Typography> */}
       </>
     </PageWrapper>
   );
