@@ -1,20 +1,22 @@
 # Loja de motocicletas
 
 Projeto de criação de um exemplo de sistema para venda de motos que cumprisse os seguintes requisitos: 
+```
 - Tela de login
 - Menu com as opções listagem de motos, configurações de usuário, sair.
 - Tela de listagem de motos (foto, nome da moto, marca, cilindrada).
 - Tela de detalhes da moto (Passando a moto selecionada na tela anterior).
-- Tela de finalizar a compra (após a tela de detalhes, com o dados da compra), após finalizar
-a compra volta pra tela de listagem.
+- Tela de finalizar a compra (após a tela de detalhes, com o dados da compra), após finalizar a compra voltar pra tela de listagem.
+```
 
 ## 🚀 Começando
-
+```
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-
+```
 ### 📋 Pré-requisitos
-
+```
 -Node.js instalado
+```
 
 ### 🔧 Instalação
 
@@ -46,22 +48,22 @@ Abrir a pasta do projeto com o sistema de versão e executar os comandos:
 ```
 
 ## 📌 Versão
-
+```
 Projeto ainda em construção.
-
+```
 ## ✒️ Autor
-
+```
 Danilo Teófilo  
 Me adicione no linkedin(https://www.linkedin.com/in/danilo-domingos-fonseca-teofilo-287477162/)
-
+```
 
 ## 📄 Licença
-
+```
 Projeto livre!
-
+```
 ## 🎁 Expressões de gratidão
-
+```
 * Se curtiu, deixe uma star no projeto e ajude esse dev iniciante com seu apoio moral 📢;
 
 * Um agradecimento ao meu grande amigo e mentor(https://github.com/carlosxjm) 🍺;
-
+```
