@@ -5,6 +5,7 @@ import "./styles.css";
 
 function CardMotorcycle() {
   const motorcycles = useMotocycles();
+        console.log(motorcycles);
 
   return (
       <div className='containerMotorcycleCards'>
