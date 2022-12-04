@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useMotocycles from "../../hooks/useMotorcycle";
+import LoadingProgress from '../LoadingProgress';
 import "./styles.css";
 
 function CardMotorcycle() {
@@ -40,7 +41,7 @@ function CardMotorcycle() {
                 </div>
               </NavLink>
             ))
-          : "Loading..."}
+          : <LoadingProgress />}
       </div>
   );
 }

@@ -6,6 +6,7 @@ import useMotocyclesDetail from "../../hooks/useMotorcycleDetail";
 import CheckoutModal from "../../components/CheckoutModal";
 import useCreateSale from "../../hooks/useCreateSale";
 import "./styles.css";
+import LoadingProgress from '../../components/LoadingProgress';
 
 function MotorcycleDetailsPage() {
   const { id } = useParams();
@@ -86,9 +87,9 @@ function MotorcycleDetailsPage() {
             </p>
           </div>
         </>
-      ) : (
-        "Loading..."
-      )}
+      ) : 
+        <LoadingProgress />
+      }
       <CheckoutModal open={open} handleClose={handleClose} />
     </PageWrapper>
   );
