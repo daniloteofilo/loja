@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/daniloteofilo/loja/static/css/main.72cdef19.css",
+    "main.js": "/daniloteofilo/loja/static/js/main.69ce1e8f.js",
+    "static/js/787.b69064a0.chunk.js": "/daniloteofilo/loja/static/js/787.b69064a0.chunk.js",
+    "static/media/hiddenPass.png": "/daniloteofilo/loja/static/media/hiddenPass.632416f6e6ae0877a2e9.png",
+    "static/media/showPass.png": "/daniloteofilo/loja/static/media/showPass.f7976d31776a79389a8e.png",
+    "index.html": "/daniloteofilo/loja/index.html",
+    "main.72cdef19.css.map": "/daniloteofilo/loja/static/css/main.72cdef19.css.map",
+    "main.69ce1e8f.js.map": "/daniloteofilo/loja/static/js/main.69ce1e8f.js.map",
+    "787.b69064a0.chunk.js.map": "/daniloteofilo/loja/static/js/787.b69064a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72cdef19.css",
+    "static/js/main.69ce1e8f.js"
+  ]
+}
